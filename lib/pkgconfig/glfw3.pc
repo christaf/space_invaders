@@ -1,7 +1,7 @@
-prefix=C:/GLFW/glfw-git/engine_project
+prefix=C:/space_invaders
 exec_prefix=${prefix}
-includedir=C:/GLFW/glfw-git/engine_project/include
-libdir=C:/GLFW/glfw-git/engine_project/lib
+includedir=C:/space_invaders/include
+libdir=C:/space_invaders/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input
