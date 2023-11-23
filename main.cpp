@@ -1,106 +1,67 @@
-//========================================================================
-// Simple multi-window example
-// Copyright (c) Camilla Löwy <elmindreda@glfw.org>
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//    claim that you wrote the original software. If you use this software
-//    in a product, an acknowledgment in the product documentation would
-//    be appreciated but is not required.
-//
-// 2. Altered source versions must be plainly marked as such, and must not
-//    be misrepresented as being the original software.
-//
-// 3. This notice may not be removed or altered from any source
-//    distribution.
-//
-//========================================================================
-
-#define GLAD_GL_IMPLEMENTATION
-#include <glad/glad.h>
-#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include <iostream>
 
-#include <cstdio>
-#include <cstdlib>
 
-int main(int argc, char** argv)
-{
-    int xpos, ypos, height;
-    const char* description;
-    GLFWwindow* windows[4];
+// Window dimensions
+const int WIDTH = 800;
+const int HEIGHT = 600;
 
-    if (!glfwInit())
-    {
-        glfwGetError(&description);
-        printf("Error: %s\n", description);
-        exit(EXIT_FAILURE);
-    }
+// Game state
+bool gameStarted = false;
 
-    glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);
-
-    glfwGetMonitorWorkarea(glfwGetPrimaryMonitor(), &xpos, &ypos, NULL, &height);
-
-    for (int i = 0;  i < 4;  i++)
-    {
-        const int size = height / 5;
-        const struct
-        {
-            float r, g, b;
-        } colors[] =
-                {
-                        { 0.95f, 0.32f, 0.11f },
-                        { 0.50f, 0.80f, 0.16f },
-                        {   0.f, 0.68f, 0.94f },
-                        { 0.98f, 0.74f, 0.04f }
-                };
-
-        if (i > 0)
-            glfwWindowHint(GLFW_FOCUS_ON_SHOW, GLFW_FALSE);
-
-        glfwWindowHint(GLFW_POSITION_X, xpos + size * (1 + (i & 1)));
-        glfwWindowHint(GLFW_POSITION_Y, ypos + size * (1 + (i >> 1)));
-
-        windows[i] = glfwCreateWindow(size, size, "Multi-Window Example", NULL, NULL);
-        if (!windows[i])
-        {
-            glfwGetError(&description);
-            printf("Error: %s\n", description);
-            glfwTerminate();
-            exit(EXIT_FAILURE);
-        }
-
-        glfwSetInputMode(windows[i], GLFW_STICKY_KEYS, GLFW_TRUE);
-
-        glfwMakeContextCurrent(windows[i]);
-        gladLoadGL();
-        glClearColor(colors[i].r, colors[i].g, colors[i].b, 1.f);
-    }
-
-    for (;;)
-    {
-        for (int i = 0;  i < 4;  i++)
-        {
-            glfwMakeContextCurrent(windows[i]);
-            glClear(GL_COLOR_BUFFER_BIT);
-            glfwSwapBuffers(windows[i]);
-
-            if (glfwWindowShouldClose(windows[i]) ||
-                glfwGetKey(windows[i], GLFW_KEY_ESCAPE))
-            {
-                glfwTerminate();
-                exit(EXIT_SUCCESS);
-            }
-        }
-
-        glfwWaitEvents();
+void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+    if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
+        gameStarted = true;
     }
 }
+void drawStartScreen(GLFWwindow *window){
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
 
+    // Draw start screen elements
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos2f(-0.5f, 0.0f);
+    const char* text = "Press SPACE to start";
+    while (*text) {
+//        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
+    }
+
+    glfwSwapBuffers(window);
+}
+
+void drawGame(GLFWwindow *window) {
+    // Draw game elements
+    // ...
+
+    glfwSwapBuffers(window);
+}
+
+int main() {
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW\n";
+        return -1;
+    }
+
+    GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Space Invaders", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window\n";
+        glfwTerminate();
+        return -1;
+    }
+
+    glfwMakeContextCurrent(window);
+    glfwSetKeyCallback(window, key_callback);
+
+    while (!glfwWindowShouldClose(window)) {
+        if (gameStarted) {
+            drawGame(window);
+        } else {
+            drawStartScreen(window);
+        }
+
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
+    return 0;
+}
