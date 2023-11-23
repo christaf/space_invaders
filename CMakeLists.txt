@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(engine_project)
 
-find_package(glfw3 REQUIRED)
+#find_package(glfw3 REQUIRED)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
