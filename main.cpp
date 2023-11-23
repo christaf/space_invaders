@@ -1,6 +1,6 @@
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-
 
 // Window dimensions
 const int WIDTH = 800;
@@ -14,17 +14,18 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
         gameStarted = true;
     }
 }
-void drawStartScreen(GLFWwindow *window){
+
+void drawStartScreen(GLFWwindow *window) {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
     // Draw start screen elements
     glColor3f(1.0f, 1.0f, 1.0f);
     glRasterPos2f(-0.5f, 0.0f);
-    const char* text = "Press SPACE to start";
-    while (*text) {
-//        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
-    }
+    const char *text = "Press SPACE to start";
+//    while (*text) {
+////        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
+//    }
 
     glfwSwapBuffers(window);
 }
@@ -51,6 +52,11 @@ int main() {
 
     glfwMakeContextCurrent(window);
     glfwSetKeyCallback(window, key_callback);
+
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        std::cerr << "Failed to initialize GLAD\n";
+        return -1;
+    }
 
     while (!glfwWindowShouldClose(window)) {
         if (gameStarted) {
