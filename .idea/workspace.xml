@@ -12,7 +12,6 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="engine_project" targetName="engine_project" />
-      <config projectName="engine_project" targetName="glad" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -24,8 +23,6 @@
     <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compiler setup" beforeDir="false" afterPath="$PROJECT_DIR$/compiler setup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
       <recent name="C:\GLFW\glfw-git\engine_project" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.engine_project">
+  <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -100,15 +97,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="glad" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine_project" TARGET_NAME="glad" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="CMake Application.engine_project" />
-      <item itemvalue="CMake Application.glad" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,7 +111,7 @@
       <workItem from="1700747564632" duration="5500000" />
       <workItem from="1700826380175" duration="1156000" />
       <workItem from="1700827667152" duration="206000" />
-      <workItem from="1700827891766" duration="829000" />
+      <workItem from="1700827891766" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="Basic structure">
       <created>1700758287512</created>
@@ -182,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700828124518</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Compiler setup final update">
+      <option name="closed" value="true" />
+      <created>1700828766844</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700828766844</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +195,8 @@
     <MESSAGE value="Added glad init" />
     <MESSAGE value="Gitignore update" />
     <MESSAGE value="Compiler setup update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compiler setup update" />
+    <MESSAGE value="Compiler setup final update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compiler setup final update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
