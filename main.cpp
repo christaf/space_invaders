@@ -23,9 +23,9 @@ void drawStartScreen(GLFWwindow *window) {
     glColor3f(1.0f, 1.0f, 1.0f);
     glRasterPos2f(-0.5f, 0.0f);
     const char *text = "Press SPACE to start";
-//    while (*text) {
-////        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
-//    }
+    while (*text) {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
+    }
 
     glfwSwapBuffers(window);
 }
