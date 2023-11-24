@@ -1,6 +1,7 @@
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <GL/gl.h>
 #include <iostream>
+#include "GL/freeglut.h"
 
 // Window dimensions
 const int WIDTH = 800;
@@ -37,11 +38,13 @@ void drawGame(GLFWwindow *window) {
     glfwSwapBuffers(window);
 }
 
-int main() {
+int main(int argc, char **argv) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW\n";
         return -1;
     }
+
+    glutInit(&argc, argv);
 
     GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Space Invaders", nullptr, nullptr);
     if (!window) {
@@ -52,11 +55,6 @@ int main() {
 
     glfwMakeContextCurrent(window);
     glfwSetKeyCallback(window, key_callback);
-
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
-        std::cerr << "Failed to initialize GLAD\n";
-        return -1;
-    }
 
     while (!glfwWindowShouldClose(window)) {
         if (gameStarted) {

@@ -23,7 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compiler setup" beforeDir="false" afterPath="$PROJECT_DIR$/compiler setup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +75,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "CPPToolchains",
     "vue.rearranger.settings.migration": "true"
   }
@@ -117,7 +123,7 @@
       <workItem from="1700747564632" duration="5500000" />
       <workItem from="1700826380175" duration="1156000" />
       <workItem from="1700827667152" duration="206000" />
-      <workItem from="1700827891766" duration="204000" />
+      <workItem from="1700827891766" duration="829000" />
     </task>
     <task id="LOCAL-00001" summary="Basic structure">
       <created>1700758287512</created>
@@ -168,17 +174,32 @@
       <option name="project" value="LOCAL" />
       <updated>1700759124063</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Compiler setup update">
+      <option name="closed" value="true" />
+      <created>1700828124518</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700828124518</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic structure" />
     <MESSAGE value="Added glad init" />
     <MESSAGE value="Gitignore update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gitignore update" />
+    <MESSAGE value="Compiler setup update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compiler setup update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
