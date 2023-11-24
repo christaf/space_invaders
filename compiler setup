@@ -1,3 +1,6 @@
 1. Install Msys, link: https://www.msys2.org/
 2. Install pacman packages: `pacman -S mingw-w64-x86_64-toolchain`
 3. Install glfw, glew, freeglut and opengl packages: `pacman -S mingw-w64-x86_64-glfw mingw-w64-x86_64-glew mingw-w64-x86_64-freeglut`
+4. Add msys mingw64 toolchain in Settings/Buid, Execution, Deployment/Toolchains, path should be: 'C:\msys64\mingw64'
+5. Add mingw64 compiler of C and C++ as well, path should be: 'C:\msys64\mingw64\bin\gcc.exe' and 'C:\msys64\mingw64\bin\g++.exe'
+6. Load changes and apply
