@@ -21,8 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1700747564632" duration="5500000" />
       <workItem from="1700826380175" duration="1156000" />
       <workItem from="1700827667152" duration="206000" />
-      <workItem from="1700827891766" duration="912000" />
+      <workItem from="1700827891766" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="Basic structure">
       <created>1700758287512</created>
@@ -178,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700828766844</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cmake update">
+      <option name="closed" value="true" />
+      <created>1700828828001</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700828828001</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +203,8 @@
     <MESSAGE value="Gitignore update" />
     <MESSAGE value="Compiler setup update" />
     <MESSAGE value="Compiler setup final update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compiler setup final update" />
+    <MESSAGE value="Cmake update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cmake update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
