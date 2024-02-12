@@ -5,5 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(${PROJECT_NAME} src/main.cpp
         src/Engine.cpp
-        src/Engine.h)
-target_link_libraries(engine_project -lopengl32 -lglfw3 -lgdi32 -lfreeglut)
+        src/Engine.h
+        src/Particle.cpp
+        src/Particle.h
+        src/shapes.h)
+target_link_libraries(engine_project -lopengl32 -lglfw3 -lgdi32 -lfreeglut -Dglm_DIR=C:/msys64/mingw64/include/glm/glm/ -lglu32)
