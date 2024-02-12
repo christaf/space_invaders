@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include "glew-2.2.0/include/GL/glew.h"
 #include <GL/freeglut.h>
 //#include "glut.h"
 #include <cmath>
@@ -9,23 +10,21 @@
 #include "glm/glm/gtc/matrix_transform.hpp"
 #include "glm/glm/vec3.hpp"
 
-
-
-#define MAX_PART 100
+#define MAX_PART 1000
 #define ACTIVATE_TIME 0.1
 
 
 Particle** part;
-//float ambientLight[4] = { .1, .1, .1, 1.0 };
-//float diffuseLight[4] = { 0.5, 0.4,0.6, 1.0 };
-//float specularLight[4] = { 1, 1, 1, 1.0 };
-//float lightPos[4] = { 5, 5, 5, 1 };
+float ambientLight[4] = { .1, .1, .1, 1.0 };
+float diffuseLight[4] = { 0.5, 0.4,0.6, 1.0 };
+float specularLight[4] = { 1, 1, 1, 1.0 };
+float lightPos[4] = { 5, 5, 5, 1 };
 float roomPos[3] = {0,-21,0};
 
 float angleY = 0;
 float angleSpeed = 0.5;
 
-/*
+
 void light(){
 	float lightPos2[4] = {5,20,0,1};
 	float light2Dir[3] = {0,0,0};
@@ -34,7 +33,7 @@ void light(){
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specularLight);
 }
-*/
+
 /*
 void lookAt(glm::vec3 Eye, glm::vec3 At, glm::vec3 Up){
     //Vector3 Eye, At, Up; //these should be parameters =)
@@ -83,7 +82,7 @@ void display(void){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
 
-    //light();
+    light();
     glLoadIdentity();
     gluLookAt(20,20,-45,0,1,0,0,1,0);
     /*
@@ -118,30 +117,6 @@ void display(void){
     glutSwapBuffers();
 }
 
-void keys(unsigned char key, int x, int y){
-    switch(key){
-        // Change update speed
-        case 's':
-            //updateSpeed -= 0.005;
-            glutPostRedisplay();
-            break;
-        case 'd':
-            //updateSpeed += 0.005;
-            glutPostRedisplay();
-            break;
-
-            // Change speed of camera rotation
-        case 'i':
-            angleSpeed+= 0.1;
-            glutPostRedisplay();
-            break;
-        case 'o':
-            angleSpeed -= 0.1;
-            glutPostRedisplay();
-            break;
-    }
-}
-
 void update(int value){
 
     angleY+= angleSpeed;
@@ -172,33 +147,28 @@ void perspectiveGL( GLdouble fovY, GLdouble aspect, GLdouble zNear, GLdouble zFa
 }
 
 void init(void){
-
     glMatrixMode(GL_PROJECTION);
-    //glLoadIdentity();
-    //glClearColor(1,1,1,1);
+    glLoadIdentity();
+    glClearColor(1,1,1,1);
 
-    /*
+    //Face culling
     glFrontFace(GL_CW);
     glEnable(GL_CULL_FACE);
     glCullFace(GL_FRONT);
-    */
 
-    perspectiveGL(100,1,1,1000);
+    //perspectiveGL(100,1,1,1000);
 
-    //gluPerspective(140,1,1,1000);//FOV
+    gluPerspective(100,1,1,1000);//FOV
 
-    //glMatrixMode(GL_MODELVIEW);
-    /*
+    glMatrixMode(GL_MODELVIEW);
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_SMOOTH);
     glEnable (GL_BLEND);
     glEnable(GL_COLOR_MATERIAL);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
-    */
-    //glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-
+    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 int main(int argc, char** argv)
 {
@@ -213,7 +183,6 @@ int main(int argc, char** argv)
     glutInitWindowSize(1280,720);
     glutCreateWindow("Particle Fountain");	//creates the window
     glutDisplayFunc(display);
-    //glutKeyboardFunc(keys);
     init();
 
     glutTimerFunc(100, update, 0);

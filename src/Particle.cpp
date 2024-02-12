@@ -68,12 +68,13 @@ void Particle::Render() const {
     glTranslated(posX, posY, posZ);
     glRotated(1.0, 1.0, 1.0, 0.0);
 
-    glutSolidSphere(size, 15, 15);
-    /*
+    //glutSolidSphere(size, 15, 15);
+
+
     glPointSize(size * 2);
     glBegin(GL_POINTS);
     glVertex3f(0, 0, 0);
     glEnd();
-    */
+
     glPopMatrix();
 }
