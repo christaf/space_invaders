@@ -11,7 +11,7 @@
 
 
 
-#define MAX_PART 500
+#define MAX_PART 100
 #define ACTIVATE_TIME 0.1
 
 
@@ -110,7 +110,7 @@ void display(void){
     drawRoom(roomPos,25,2,25);
     for (int i = 0; i < MAX_PART; i++){
         glPushMatrix();
-        //glRotatef(angleY,0,1,0);
+        glRotatef(angleY,0,1,0);
         part[i]->Render();
         glPopMatrix();
     }
@@ -146,7 +146,7 @@ void update(int value){
 
     angleY+= angleSpeed;
     for (int i = 0; i < MAX_PART; i++){
-        part[i]->live(0.5f);
+        part[i]->live(0.1f);
         /*
         if (part[i]->active) {
             part[i]->live(0.5f);
