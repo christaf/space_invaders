@@ -1,149 +1,169 @@
-//
-// Created by mateu on 24.11.2023.
-//
 
-#include "Engine.h"
-#include <GLFW/glfw3.h>
-#include <iostream>
+#include <cstdlib>
+#include "GL/glew.h"
 #include <GL/freeglut.h>
+#include <cmath>
+#include <iostream>
+#include "Particle.h"
+#include "Bullet.h"
+#include "Spaceship.h"
+
+#define MAX_PART 1000
+#define ACTIVATE_TIME 0.1
 
 class Engine {
-public:
-
-    enum class GameState {
-        StartScreen,
-        Game,
-    };
-
-    Engine(int width, int height, const char *title)
-            : width(width), height(height), title(title) {
-        gameState = GameState::StartScreen;
-    }
-
-    void run(int *argc, char **argv) {
-        if (!init()) {
-            std::cerr << "Failed to initialize GLFW\n";
-            return;
-        }
-
-        glutInit(argc, argv);
-        glfwSetWindowUserPointer(window, this);
-
-        glfwSwapInterval(1);  // Enable vertical synchronization
-
-        double lastTime = glfwGetTime();
-        const double targetFrameRate = 60.0;
-        const double frameTime = 1.0 / targetFrameRate;
-
-        while (!glfwWindowShouldClose(window)) {
-            double currentTime = glfwGetTime();
-            double deltaTime = currentTime - lastTime;
-
-            if (deltaTime >= frameTime) {
-                lastTime = currentTime;
-
-                glfwPollEvents();
-                update();
-                render();
-            }
-        }
-
-        cleanup();
-    }
-
 private:
-    int width;
-    int height;
-    const char *title;
-    GLFWwindow *window{};
-    GameState gameState;
+    Particle **particles;
+    float angleY;
+    float angleSpeed;
+    Bullet **bullets;
+    Spaceship *spaceship;
+    bool isSpacePressed = false;
 
-    bool init() {
-        if (!glfwInit()) {
-            return false;
+public:
+    Engine() {
+        particles = new Particle *[MAX_PART];
+        bullets = new Bullet *[MAX_PART];
+        for (int i = 0; i < MAX_PART; i++) {
+            particles[i] = new Particle();
         }
-
-        window = glfwCreateWindow(width, height, title, nullptr, nullptr);
-
-        if (!window) {
-            std::cerr << "Failed to create GLFW window\n";
-            glfwTerminate();
-            return false;
+        for (int i = 0; i < MAX_PART; i++) {
+            bullets[i] = new Bullet();
         }
-
-        glfwMakeContextCurrent(window);
-        glfwSetKeyCallback(window, key_callback);
-
-        return true;
+        spaceship = new Spaceship();
+        angleY = 0;
+        angleSpeed = 0.5;
     }
 
-    void update() {
-        // Game logic update
-    }
-
-    void render() {
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        if (gameState == GameState::StartScreen) {
-            drawStartScreen();
-        } else if (gameState == GameState::Game) {
-            drawGame();
+    ~Engine() {
+        for (int i = 0; i < MAX_PART; i++) {
+            delete particles[i];
         }
-
-        glfwSwapBuffers(window);
+        delete[] particles;
     }
 
-    static void cleanup() {
-        glfwTerminate();
-        glutLeaveMainLoop();
+    static void init() {
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glClearColor(1, 1, 1, 1);
+
+        //Face culling
+        glFrontFace(GL_CW);
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_FRONT);
+
+        //perspectiveGL(100,1,1,1000);
+
+        gluPerspective(100, 1, 1, 1000); //FOV
+
+        glMatrixMode(GL_MODELVIEW);
+        glEnable(GL_DEPTH_TEST);
+        glShadeModel(GL_SMOOTH);
+        glEnable(GL_BLEND);
+        glEnable(GL_COLOR_MATERIAL);
+        glEnable(GL_LIGHTING);
+        glEnable(GL_LIGHT0);
+
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     }
 
-    static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-        auto *engine = static_cast<Engine *>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->handleKey(key, action);
-        }
-    }
+    void update(int value) {
+        angleY += angleSpeed;
 
-    void handleKey(int key, int action) {
-        if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
-            if (gameState == GameState::StartScreen) {
-                gameState = GameState::Game;
-                std::cout << "Game started\n";
+        // Shoot bullet if spacebar is pressed
+
+//        for(int i = 0; i < MAX_PART; i++) {
+//            particles[i]->live(ACTIVATE_TIME);
+//        }
+
+//        spaceship->live(ACTIVATE_TIME);
+        if (isSpacePressed) {
+            for (int i = 0; i < MAX_PART; i++) {
+                if (bullets[i] == nullptr) {
+//                    bullets[i] = new Bullet();
+                } else {
+//                    if(!bullets[i]->active) {
+                    bullets[i]->live(ACTIVATE_TIME);
+//                    }
+                }
             }
         }
+
+
+        glutPostRedisplay();
+        glutTimerFunc(10, staticUpdateWrapper, 0);
     }
 
-    void drawStartScreen() {
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+    void display() {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
 
-        // Draw start screen elements
-        glColor3f(1.0f, 1.0f, 1.0f);
-        glRasterPos2f(-0.5f, 0.0f);
-        const char *text = "Press SPACE to start";
-        while (*text) {
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
+        gluLookAt(20, 20, 0, 0, 1, 0, 0, 1, 0);
+
+        // Render particles
+//        for (int i = 0; i < MAX_PART; i++) {
+//            glPushMatrix();
+//            glRotatef(angleY, 0, 1, 0);
+//            particles[i]->Render();
+//            glPopMatrix();
+//        }
+        fireBullet();
+        spaceship->Render();
+
+        glFlush();
+        glutSwapBuffers();
+    }
+
+    void fireBullet() {
+        glPushMatrix();
+        bullets[0]->Render();
+        glPopMatrix();
+    }
+
+    static void staticDisplayWrapper() {
+        instance->display();
+    }
+
+    static void staticUpdateWrapper(int value) {
+        instance->update(value);
+    }
+
+    static void handleKeypress(unsigned char key, int x, int y) {
+
+        switch (key) {
+            case 'w':
+                instance->spaceship->move(0, 0, 1);
+                break;
+            case 's':
+                instance->spaceship->move(0, 0, -1);
+                break;
+            case 'a':
+                instance->spaceship->move(-1, 0, 0);
+                break;
+            case 'd':
+                instance->spaceship->move(1, 0, 0);
+                break;
+            case ' ':
+                instance->isSpacePressed = true;
+                break;
         }
-
-        glfwSwapBuffers(window);
     }
 
-    void drawGame() {
-        glClearColor(0.5f, 0.0f, 1.0f, 0.5f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        glColor3f(1.0f, 0.0f, 1.0f);
-        glRasterPos2f(-0.5f, 0.0f);
-        const char *text = "GAME UHAHAHHA";
-        while (*text) {
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *text++);
+    static void handleKeyRelease(unsigned char key, int x, int y) {
+        if (key == ' ') {
+            instance->isSpacePressed = false;
         }
-
-        // Draw game elements
-        // ...
-
-        glfwSwapBuffers(window);
     }
+
+    static void run() {
+        init();
+        glutDisplayFunc(staticDisplayWrapper);
+        glutKeyboardFunc(handleKeypress);
+        glutKeyboardUpFunc(handleKeyRelease);
+        glutTimerFunc(10, staticUpdateWrapper, 0);
+        glutMainLoop();
+    }
+
+    static Engine *instance;
 };

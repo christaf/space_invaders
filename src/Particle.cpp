@@ -4,14 +4,14 @@
 
 #include "Particle.h"
 #include "GL/freeglut.h "
-#include "stdlib.h"
+#include <cstdlib>
 #include <cmath>
 
-#define _USE_MATH_DEFINES
+#define USE_MATH_DEFINES
 
 #define F_RAND() ((float)rand()/RAND_MAX)
 
-Particle::~Particle() {}
+Particle::~Particle() = default;
 
 Particle::Particle() {
     activate();

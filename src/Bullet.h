@@ -1,16 +1,25 @@
 //
+// Created by mateu on 15.02.2024.
+//
+
+#ifndef ENGINE_PROJECT_BULLET_H
+#define ENGINE_PROJECT_BULLET_H
+
+//
 // Created by mateu on 12/02/2024.
 //
 
-#ifndef ENGINE_PROJECT_PARTICLE_H
-#define ENGINE_PROJECT_PARTICLE_H
 
-
-class Particle {
+class Bullet {
 public:
-    Particle();
-    ~Particle();
+    Bullet();
+
+    Bullet(float start_x, float start_y, float start_z);
+
+    ~Bullet();
+
     void activate();
+
     void live(float tt);
 
     void Render() const;
@@ -35,4 +44,7 @@ public:
 
 //-lglu32
 
-#endif //ENGINE_PROJECT_PARTICLE_H
+
+
+
+#endif //ENGINE_PROJECT_BULLET_H

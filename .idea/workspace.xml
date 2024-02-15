@@ -20,190 +20,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Engine.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engine.h" afterDir="false" />
+    <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="Updated project structure">
+      <change afterPath="$PROJECT_DIR$/src/Bullet.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bullet.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Spaceship.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Spaceship.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fragmentshader.fragmentshader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vertexshader.vertexshader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GLFW/glfw3.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GLFW/glfw3native.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/KHR/khrplatform.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/glad/glad.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmake/glfw3/glfw3Config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmake/glfw3/glfw3ConfigVersion.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmake/glfw3/glfw3Targets-noconfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmake/glfw3/glfw3Targets.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pkgconfig/glfw3.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/bc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/bc_sd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/build_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/build_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/compat_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/compat_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/compile_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/compile_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/context_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/context_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/deprecated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/dir_49e56c817e5e54854c35e136979f97ca.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/dir_7d046523570a4bf058ddf3b10b545b6c.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/dir_d44c64559bbebec7f509842c48db8b23.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/doc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/docd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/doxygen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/doxygen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/dynsections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/extra.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/files.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/folderclosed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/folderclosedd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/folderopen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/folderopend.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/glfw3_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/glfw3_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/glfw3native_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/glfw3native_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__context.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__errors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__gamepad__axes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__gamepad__buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__hat__state.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__init.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__input.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__joysticks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__keys.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__mods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__monitor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__native.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__shapes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__vulkan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/group__window.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/input_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/input_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/internal_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/internals_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/intro_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/intro_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/main_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/menudata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/modules.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/monitor_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/monitor_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/moving_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/moving_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/nav_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/nav_fd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/nav_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/nav_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/nav_hd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/news_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/pages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/quick_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/quick_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_11.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_12.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/all_f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/classes_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/defines_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/files_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/functions_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/groups_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/mag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/mag_d.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/mag_sel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/mag_seld.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/pages_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/searchdata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/typedefs_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/search/variables_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/spaces.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/splitbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/splitbard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/struct_g_l_f_wallocator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/struct_g_l_f_wgamepadstate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/struct_g_l_f_wgammaramp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/struct_g_l_f_wimage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/struct_g_l_f_wvidmode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/sync_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/sync_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_ad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_bd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_hd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tab_sd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/vulkan_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/vulkan_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/window_8dox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/doc/GLFW/html/window_guide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/glad.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Particle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Particle.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +45,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Fountain" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -231,36 +66,42 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2021" />
     <option name="minorVersion" value="3.3" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2YOo1l7uazmq70NjnAot23du6KK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "CPPToolchains",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SpaceInvaders__0.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mateu/Desktop/Projekt_AGK/Engine-main/Engine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GLFW\glfw-git\engine_project\src" />
@@ -292,7 +133,15 @@
       <workItem from="1700747564632" duration="5500000" />
       <workItem from="1700826380175" duration="1156000" />
       <workItem from="1700827667152" duration="206000" />
-      <workItem from="1700827891766" duration="3358000" />
+      <workItem from="1700827891766" duration="8533000" />
+      <workItem from="1700851461146" duration="1000" />
+      <workItem from="1701104470561" duration="2976000" />
+      <workItem from="1701112814694" duration="1219000" />
+      <workItem from="1701437737426" duration="5763000" />
+      <workItem from="1701781862090" duration="2170000" />
+      <workItem from="1705672121483" duration="5131000" />
+      <workItem from="1707824375146" duration="300000" />
+      <workItem from="1708017290523" duration="11769000" />
     </task>
     <task id="LOCAL-00001" summary="Basic structure">
       <created>1700758287512</created>
@@ -375,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700828851152</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated project structure,&#10;added Engine class and header(prob won't be used)">
+      <option name="closed" value="true" />
+      <created>1700831331535</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700831331535</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,6 +245,9 @@
     <isAutomaticFoundErrors value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Basic structure" />
     <MESSAGE value="Added glad init" />
     <MESSAGE value="Gitignore update" />
@@ -395,7 +255,11 @@
     <MESSAGE value="Compiler setup final update" />
     <MESSAGE value="Cmake update" />
     <MESSAGE value="gitignore update" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore update" />
+    <MESSAGE value="Updated project structure,&#10;added Engine class and header(prob won't be used)" />
+    <MESSAGE value="Updated project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated project structure" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
