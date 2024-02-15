@@ -20,20 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="Updated project structure">
-      <change afterPath="$PROJECT_DIR$/src/Bullet.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bullet.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Spaceship.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Spaceship.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fragmentshader.fragmentshader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vertexshader.vertexshader" afterDir="false" />
+    <list default="true" id="689cde48-e6fc-4d30-a4e5-7217ad0e24e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Engine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spaceship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spaceship.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +41,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "christaf"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2b0bf2f4-bcc9-46f5-b102-80df7eee75d3" />
+        <option name="url" value="https://github.com/christaf/space_invaders.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/include/GLFW/glfw3native.h" root0="FORCE_HIGHLIGHTING" />
@@ -141,7 +145,7 @@
       <workItem from="1701781862090" duration="2170000" />
       <workItem from="1705672121483" duration="5131000" />
       <workItem from="1707824375146" duration="300000" />
-      <workItem from="1708017290523" duration="11769000" />
+      <workItem from="1708017290523" duration="12041000" />
     </task>
     <task id="LOCAL-00001" summary="Basic structure">
       <created>1700758287512</created>
@@ -232,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700831331535</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added basic bullets">
+      <option name="closed" value="true" />
+      <created>1708034393834</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708034393834</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,8 +257,6 @@
     <isAutomaticFoundErrors value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Basic structure" />
     <MESSAGE value="Added glad init" />
@@ -257,7 +267,8 @@
     <MESSAGE value="gitignore update" />
     <MESSAGE value="Updated project structure,&#10;added Engine class and header(prob won't be used)" />
     <MESSAGE value="Updated project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated project structure" />
+    <MESSAGE value="Added basic bullets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic bullets" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -68,13 +68,15 @@ void Spaceship::live(float tt) {
 
 void Spaceship::Render() const {
 
-    glClear(GL_COLOR_BUFFER_BIT);
-    glLoadIdentity();
+//    glClear(GL_COLOR_BUFFER_BIT);
+//    glLoadIdentity();
 
     // Draw the spaceship
+    glPushMatrix();
     draw();
+    glPopMatrix();
 
-    glutSwapBuffers();
+//    glutSwapBuffers();
 
 }
 

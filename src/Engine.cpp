@@ -65,6 +65,9 @@ public:
         glEnable(GL_LIGHT0);
 
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+        // Enable depth testing
+        glEnable(GL_DEPTH_TEST);
     }
 
     void update(int value) {
